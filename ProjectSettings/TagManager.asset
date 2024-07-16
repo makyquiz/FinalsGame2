@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacles
   - Box
+  - Trigger
+  - Gem
   layers:
   - Default
   - TransparentFX
