@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
     bool gameHasEnded = false;
     public float restartDelay = 1f;
 
+    public GameObject gem;
+
+    public static int triggersInLevel;
+    public static int triggersActivated = 0;
+
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -16,10 +22,20 @@ public class GameManager : MonoBehaviour
             {
                 gameHasEnded = true;
                 Debug.Log("Restarted");
-                RestartLevel();
+                Invoke("RestartLevel", restartDelay);
             }           
         }
+
+        if (triggersActivated == triggersInLevel)
+        {
+            gem.SetActive(true);
+        }
+        else
+        {
+            gem.SetActive(false);
+        }
     }
+
 
     public void EndLevel()
     {
@@ -29,10 +45,12 @@ public class GameManager : MonoBehaviour
     void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        triggersInLevel = 0;
     }
 
     void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        triggersInLevel = 0;
     }
 }

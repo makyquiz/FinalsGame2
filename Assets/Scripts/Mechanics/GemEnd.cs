@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class GemEnd : MonoBehaviour
 {
-    
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            FindObjectOfType<GameManager>().EndLevel();
+        }
+
+    }
 }

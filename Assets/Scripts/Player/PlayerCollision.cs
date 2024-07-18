@@ -6,12 +6,12 @@ public class PlayerCollision : MonoBehaviour
 {
     public GameManager gameManager;
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Gem")
-        {
-            gameManager.EndLevel();
-        }
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag == "Gem")
+    //    {
+    //        gameManager.EndLevel();
+    //    }
 
-    }
+    //}
 }

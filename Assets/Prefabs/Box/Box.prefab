@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6548530389067334004}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1293799175, guid: ecb67af5a626efe4780505567b526acb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,9 +98,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15
-  m_LinearDrag: 5
-  m_AngularDrag: 0
+  m_Mass: 3
+  m_LinearDrag: 20
+  m_AngularDrag: 20
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -112,7 +112,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &6548530389067334004
 BoxCollider2D:
   m_ObjectHideFlags: 0
