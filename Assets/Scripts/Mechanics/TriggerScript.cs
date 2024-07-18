@@ -11,11 +11,6 @@ public class TriggerScript : MonoBehaviour
         GameManager.triggersInLevel++;
     }
 
-    private void Update()
-    {
-        Debug.Log("level triggers " + GameManager.triggersInLevel);
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Box")
