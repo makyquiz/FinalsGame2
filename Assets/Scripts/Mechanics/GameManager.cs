@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 1f;
 
     public GameObject gem;
+    public GameObject gemGetUI;
 
     public static int triggersInLevel;
     public static int triggersActivated = 0;
@@ -36,10 +37,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void EndLevel()
     {
-        Invoke("NextLevel", restartDelay);
+        gemGetUI.SetActive(true);
+        Invoke("NextLevel", restartDelay );
     }
 
     void NextLevel()
